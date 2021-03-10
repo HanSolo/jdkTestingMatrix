@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - '*/*/java12.yml'
-  schedule:
+  #schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '32 */24 * * *'
+  #  - cron:  '32 */24 * * *'
 
 jobs:
   java12:
@@ -23,7 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK
-      uses: actions/setup-java@v1
+      uses: HanSolo/setup-java@disco
       with:
         java-version: 12.0.${{ matrix.update }}
     - name: java -version

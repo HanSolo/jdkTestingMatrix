@@ -4,9 +4,9 @@ on:
   push:
     paths:
       - '*/*/java15.yml'
-  schedule:
+  #schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '5 */3 * * *'
+  #  - cron:  '5 */3 * * *'
       
 jobs:
   java15:
@@ -27,7 +27,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Set up ${{ matrix.package }}
-      uses: actions/setup-java@v1
+      uses: HanSolo/setup-java@disco
       with:
         java-package: ${{ matrix.package }}
         java-version: ${{ matrix.update }}
