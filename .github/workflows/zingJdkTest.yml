@@ -1,9 +1,9 @@
 name: Zing_Latest_JDK
 
 on:
-  schedule:
+  #schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '35 2 * * *'
+  #  - cron:  '35 2 * * *'
   push:
     paths:
       - '.github/workflows/zingJdkTest.yml'
