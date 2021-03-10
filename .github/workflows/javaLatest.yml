@@ -23,7 +23,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK
-      uses: HanSolo/setup-java@disco
+      uses: HanSolo/setup-java@6df9b7773c2b49a63ac420e9ce22b44ef5fcd31a
       with:
         java-version: ${{ matrix.update }}
     - name: java -version
